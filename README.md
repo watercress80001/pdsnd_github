@@ -1,6 +1,8 @@
+_Most recent update: **08/13/2022**_
+
 ## **Welcome to Bikeshare!**
 
-This project is called (you guessed it) Bikeshare. It's a simple command-line project that allows the user to summarize bikesharing data for the folllowing cities:
+This project is called (you guessed it) Bikeshare. It's a simple command-line project that allows the user to summarize bikesharing data for the following cities:
 * Chicago
 * New York City
 * Washington[^1]
@@ -17,8 +19,6 @@ The user also has the option to read through raw data files, if they desire. I b
 The bikeshare project was created on 07/20/2022. It was a Wednesday :-)
 
 The project readme was later created on 08/13/2022. That was a Saturday.
-
-The readme was most recently updated on: **08/13/2022**.
 
 As of 08/13/2022, this project is contained in a repo named *pdsnd_github*[^2] in GitHub.
 
@@ -41,13 +41,13 @@ Some of the readme's and other resources I used when constructing this readme ar
 - [Chrome Lighthouse readme](https://github.com/watercress80001/lighthouse/blob/b0a9b0b948c41e57a33575634963a84ede81f631/readme.md)
 - [makeMKV\_Readme](/makeMKV_Readme.rtf) This is a readme for a program I'm using to archive my dvds.
 - [GitHub Markdown Docs](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax) This was used to double check my markdown choices.
- - as well as countless other readme's I've read over the years (these have been lost to old computers. May they rest in peace).
+ - as well as countless other readme's I've read over the years (these have been lost to old computers--may they rest in peace).
 
 *Vim info:*
 
 I was very distressed when I learned that Atom would sunset in Dec 2022. VS Code is the natural substitute but for some reason I just don't like it. Instead, I've been using vim as much as possible for the git segment of my nano degree. To manage it, I've used the following sites (after googling the question):
    
- - [opening files](https://blog.confirm.ch/mastering-vim-opening-files/)
+- [opening files](https://blog.confirm.ch/mastering-vim-opening-files/)
 - [text navigation](https://www.thegeekstuff.com/2009/03/8-essential-vim-editor-navigation-fundamentals/)
 - [undo, redo](https://vim.fandom.com/wiki/Undo_and_Redo)
 - [cut, copy, paste](https://linuxize.com/post/how-to-copy-cut-paste-in-vim/)
