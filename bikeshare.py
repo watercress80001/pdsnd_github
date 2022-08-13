@@ -11,6 +11,14 @@ CITY_DATA = { 'chicago': 'chicago.csv',
 sorry = "Sorry, that isn't an option."
 
 def redo_or_quit(prompt,list):
+    """
+    Prompts user to re-enter input if the previously entered input isn't in the provided list
+    Loops indefinitely until the user enters valid input or elects not to continue (i.e. 
+    decides not to try anymore).
+
+    Returns:
+        (str) actual text varies, depending on the prompt
+    """
     filter = input(prompt).lower()
     while filter not in list:
         print('\n',sorry)
