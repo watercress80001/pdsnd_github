@@ -45,7 +45,7 @@ Some of the readme's and other resources I used when constructing this readme ar
 - [Chrome Lighthouse readme](https://github.com/watercress80001/lighthouse/blob/b0a9b0b948c41e57a33575634963a84ede81f631/readme.md)
 - [makeMKV\_Readme](/makeMKV_Readme.rtf) This is a readme for a program I'm using to archive my dvds.
 - [GitHub Markdown Docs](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax) This was used to double check my markdown choices.
-- [GitHub Readme Docs](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-readmes
+- [GitHub Readme Docs](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-readmes)
 - as well as countless other readme's I've read over the years (these have been lost to old computers--may they rest in peace).
 
 *Vim and VS Code info:*
