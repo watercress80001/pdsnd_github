@@ -105,12 +105,12 @@ def load_data(city, month, day): #reviewed
     top_day_all = df['day_of_week'].mode()[0] #str
 
     #filter based on month or date
-    if month != 'all' and month != None:
+    if month not in ['all', None]:
         months = ['jan', 'feb', 'mar', 'apr', 'may', 'jun']
         month = months.index(month)+1 #convert str to int
         df = pd.DataFrame(df[df['month']== month])
 
-    if day != 'all' and day != None:
+    if day not in ['all', None]:
         df = pd.DataFrame(df[df['day_of_week'] == day.title()])
     #return filtered dataset
     return df, top_month_all, top_day_all #dataframe, int, str
@@ -127,7 +127,7 @@ def time_stats(df, month, day, top_month_all, top_day_all): #reviewed
     top_month = months[df['month'].mode()[0]]
     top_month_all = months[top_month_all] #convert int to str
 
-    if month == None or month == 'all':
+    if month in ['all', None]:
         print('The most popular month for a ride is {}.'.format(top_month.title()))
     elif top_month.lower() == top_month_all.lower():
         print('The most popular month for a ride is the selected month, {}.'.format(top_month.title()))
@@ -137,7 +137,7 @@ def time_stats(df, month, day, top_month_all, top_day_all): #reviewed
     # display the most common day of week
     top_day = df['day_of_week'].mode()[0]
 
-    if day == None or day == 'all':
+    if day in ['all', None]:
         print('The most popular day for a ride is {}.'.format(top_day))
     elif top_day.lower() == top_day_all.lower():
         print('The most popular weekday for a ride is the selected day, {}.'.format(top_day.title()))
