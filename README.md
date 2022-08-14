@@ -1,4 +1,4 @@
-_Most recent update: **08/13/2022**_
+_Most recent update: **08/14/2022**_
 
 ## **Welcome to Bikeshare!**
 
@@ -16,13 +16,11 @@ This is a useful demonstration of beginner python coding since it makes use of a
 ### **Creation Dates**
 
 The bikeshare project was created on 07/20/2022. It was a Wednesday :-)
-
 The project readme was later created on 08/13/2022. That was a Saturday.
-
 As of 08/13/2022, this project is contained in a repo named *pdsnd_github*[^2] in GitHub.
 
 
-[^2]: I think this stands for **P**ersonal **D**ata **S**cience **N**ano **D**egree but I'm not sure.
+[^2]: I think this stands for **P**ython **D**ata **S**cience **N**ano **D**egree but I'm not sure.
 
 ----
 ### **Files used**
@@ -50,16 +48,19 @@ Some of the readme's and other resources I used when constructing this readme ar
 - [GitHub Readme Docs](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-readmes
 - as well as countless other readme's I've read over the years (these have been lost to old computers--may they rest in peace).
 
-*Vim info:*
+*Vim and VS Code info:*
 
-I was very distressed when I learned that Atom would sunset in Dec 2022. VS Code is the natural substitute but for some reason I just don't like it. Instead, I've been using vim as much as possible for the git segment of my nano degree. To manage it, I've used the following sites (after googling the question):
+I was distressed when I learned that Atom would sunset in Dec 2022. As a result, I've been using Vim and VS Code for the git segment of my nano degree. To better understand these tools, I've used the following sites:
+
+*Vim*
    
 - [opening files](https://blog.confirm.ch/mastering-vim-opening-files/)
 - [text navigation](https://www.thegeekstuff.com/2009/03/8-essential-vim-editor-navigation-fundamentals/)
 - [undo, redo](https://vim.fandom.com/wiki/Undo_and_Redo)
 - [cut, copy, paste](https://linuxize.com/post/how-to-copy-cut-paste-in-vim/)
- 
- YouTube videos
-- [Vim in 100 seconds](https://www.youtube.com/watch?v=-txKSRn0qeA)
-- [Vim Tricks](https://www.youtube.com/watch?v=B-EPvfxcgl0) Overkill for my current needs but I can use it later :-)
+- YouTube video: [Vim in 100 seconds](https://www.youtube.com/watch?v=-txKSRn0qeA)
+- YouTube video: [Vim Tricks](https://www.youtube.com/watch?v=B-EPvfxcgl0) 
 
+*VS Code*
+
+- YouTube video: [VSCode Tutorial for Beginners](https://www.youtube.com/watch?v=ORrELERGIHs)
