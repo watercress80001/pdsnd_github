@@ -34,7 +34,7 @@ def redo_or_quit(prompt,list):
     except:
         print('Sorry, there\'s an issue with your input.')
 
-def get_filters(): #reviewed
+def get_filters(): 
     """
     Asks user to specify a city, month, and day to analyze.
 
@@ -81,7 +81,7 @@ def get_filters(): #reviewed
     return city, month, day #all lower()
 
 
-def load_data(city, month, day): #reviewed
+def load_data(city, month, day):
     """
     Loads data for the specified city and filters by month and day if applicable.
 
