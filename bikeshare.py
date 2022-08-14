@@ -19,17 +19,20 @@ def redo_or_quit(prompt,list):
     Returns:
         (str) actual text varies, depending on the prompt
     """
-    filter = input(prompt).lower()
-    while filter not in list:
-        print('\n',sorry)
-        options = input("Would you like to continue [Yes/No]? ").lower()
-        if options == 'no':
-            quit()
+    try: 
+        filter = input(prompt).lower()
+        while filter not in list:
+            print('\n',sorry)
+            options = input("Would you like to continue [Yes/No]? ").lower()
+            if options == 'no':
+                quit()
+            else:
+                if options.lower() == 'yes':
+                    filter = input(prompt).lower()
         else:
-            if options.lower() == 'yes':
-                filter = input(prompt).lower()
-    else:
-        return filter
+            return filter
+    except:
+        print('Sorry, there\'s an issue with your input.')
 
 def get_filters(): #reviewed
     """
