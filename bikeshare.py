@@ -1,7 +1,5 @@
 import time
 import pandas as pd
-import numpy as np
-import sys
 import datetime as dt
 
 CITY_DATA = { 'chicago': 'chicago.csv',
