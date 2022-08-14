@@ -11,6 +11,14 @@ CITY_DATA = { 'chicago': 'chicago.csv',
 sorry = "Sorry, that isn't an option."
 
 def redo_or_quit(prompt,list):
+    """
+    Prompts user to re-enter input if the previously entered input isn't in the provided list
+    Loops indefinitely until the user enters valid input or elects not to continue (i.e. 
+    decides not to try anymore).
+
+    Returns:
+        (str) actual text varies, depending on the prompt
+    """
     filter = input(prompt).lower()
     while filter not in list:
         print('\n',sorry)
@@ -51,25 +59,20 @@ def get_filters(): #reviewed
     print("Gathering data for {}...".format(city.title()))
 
     # get user input for month (all, january, february, ... , june)
-    time_prompt = "Do you want to filter by month or day? "
-    time_filter = redo_or_quit(time_prompt,['month','day'])
-
-    if time_filter == 'month':
-        month_prompt = "Which month: Jan, Feb, Mar, Apr, May, Jun or all?\nPlease type your choice as listed: "
-        month = redo_or_quit(month_prompt,months)
-        if month == 'all':
-            print('Filtering for all months...')
-        else:
-            print('Filtering for {}...'.format(month.title()))
+    month_prompt = "Which month: Jan, Feb, Mar, Apr, May, Jun or all?\nPlease type your choice as listed: "
+    month = redo_or_quit(month_prompt,months)
+    if month == 'all':
+        print('Filtering for all months...')
+    else:
+        print('Filtering for {}...'.format(month.title()))
 
     # get user input for day of week (all, monday, tuesday, ... sunday)
-    elif time_filter == 'day':
-        day_prompt = "Which day - Mon, Tue, Wed, Thu, Fri, Sat, Sun or all?\n Please type the abbreviated day name: "
-        day = redo_or_quit(day_prompt,days)
-        if day == 'all':
-            print('Filtering for all days...')
-        else:
-            print('Filtering for {}...'.format(day.title()))
+    day_prompt = "Which day - Mon, Tue, Wed, Thu, Fri, Sat, Sun or all?\n Please type the abbreviated day name: "
+    day = redo_or_quit(day_prompt,days)
+    if day == 'all':
+        print('Filtering for all days...')
+    else:
+        print('Filtering for {}...'.format(day.title()))
 
     print('-'*40)
     return city, month, day #all lower()
