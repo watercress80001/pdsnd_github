@@ -1,12 +1,10 @@
 import time
 import pandas as pd
-import numpy as np
-import sys
 import datetime as dt
 
-CITY_DATA = { 'chicago': 'chicago.csv',
-              'new york city': 'new_york_city.csv',
-              'washington': 'washington.csv' }
+CITY_DATA = { 'chicago': 'data/chicago.csv',
+              'new york city': 'data/new_york_city.csv',
+              'washington': 'data/washington.csv' }
 
 sorry = "Sorry, that isn't an option."
 
@@ -19,19 +17,22 @@ def redo_or_quit(prompt,list):
     Returns:
         (str) actual text varies, depending on the prompt
     """
-    filter = input(prompt).lower()
-    while filter not in list:
-        print('\n',sorry)
-        options = input("Would you like to continue [Yes/No]? ").lower()
-        if options == 'no':
-            quit()
+    try: 
+        filter = input(prompt).lower()
+        while filter not in list:
+            print('\n',sorry)
+            options = input("Would you like to continue [Yes/No]? ").lower()
+            if options == 'no':
+                quit()
+            else:
+                if options.lower() == 'yes':
+                    filter = input(prompt).lower()
         else:
-            if options.lower() == 'yes':
-                filter = input(prompt).lower()
-    else:
-        return filter
+            return filter
+    except:
+        print('Sorry, there\'s an issue with your input.')
 
-def get_filters(): #reviewed
+def get_filters(): 
     """
     Asks user to specify a city, month, and day to analyze.
 
@@ -59,31 +60,26 @@ def get_filters(): #reviewed
     print("Gathering data for {}...".format(city.title()))
 
     # get user input for month (all, january, february, ... , june)
-    time_prompt = "Do you want to filter by month or day? "
-    time_filter = redo_or_quit(time_prompt,['month','day'])
-
-    if time_filter == 'month':
-        month_prompt = "Which month: Jan, Feb, Mar, Apr, May, Jun or all?\nPlease type your choice as listed: "
-        month = redo_or_quit(month_prompt,months)
-        if month == 'all':
-            print('Filtering for all months...')
-        else:
-            print('Filtering for {}...'.format(month.title()))
+    month_prompt = "Which month: Jan, Feb, Mar, Apr, May, Jun or all?\nPlease type your choice as listed: "
+    month = redo_or_quit(month_prompt,months)
+    if month == 'all':
+        print('Filtering for all months...')
+    else:
+        print('Filtering for {}...'.format(month.title()))
 
     # get user input for day of week (all, monday, tuesday, ... sunday)
-    elif time_filter == 'day':
-        day_prompt = "Which day - Mon, Tue, Wed, Thu, Fri, Sat, Sun or all?\n Please type the abbreviated day name: "
-        day = redo_or_quit(day_prompt,days)
-        if day == 'all':
-            print('Filtering for all days...')
-        else:
-            print('Filtering for {}...'.format(day.title()))
+    day_prompt = "Which day - Mon, Tue, Wed, Thu, Fri, Sat, Sun or all?\n Please type the abbreviated day name: "
+    day = redo_or_quit(day_prompt,days)
+    if day == 'all':
+        print('Filtering for all days...')
+    else:
+        print('Filtering for {}...'.format(day.title()))
 
     print('-'*40)
     return city, month, day #all lower()
 
 
-def load_data(city, month, day): #reviewed
+def load_data(city, month, day):
     """
     Loads data for the specified city and filters by month and day if applicable.
 
@@ -107,12 +103,12 @@ def load_data(city, month, day): #reviewed
     top_day_all = df['day_of_week'].mode()[0] #str
 
     #filter based on month or date
-    if month != 'all' and month != None:
+    if month not in ['all', None]:
         months = ['jan', 'feb', 'mar', 'apr', 'may', 'jun']
         month = months.index(month)+1 #convert str to int
         df = pd.DataFrame(df[df['month']== month])
 
-    if day != 'all' and day != None:
+    if day not in ['all', None]:
         df = pd.DataFrame(df[df['day_of_week'] == day.title()])
     #return filtered dataset
     return df, top_month_all, top_day_all #dataframe, int, str
@@ -129,7 +125,7 @@ def time_stats(df, month, day, top_month_all, top_day_all): #reviewed
     top_month = months[df['month'].mode()[0]]
     top_month_all = months[top_month_all] #convert int to str
 
-    if month == None or month == 'all':
+    if month in ['all', None]:
         print('The most popular month for a ride is {}.'.format(top_month.title()))
     elif top_month.lower() == top_month_all.lower():
         print('The most popular month for a ride is the selected month, {}.'.format(top_month.title()))
@@ -139,7 +135,7 @@ def time_stats(df, month, day, top_month_all, top_day_all): #reviewed
     # display the most common day of week
     top_day = df['day_of_week'].mode()[0]
 
-    if day == None or day == 'all':
+    if day in ['all', None]:
         print('The most popular day for a ride is {}.'.format(top_day))
     elif top_day.lower() == top_day_all.lower():
         print('The most popular weekday for a ride is the selected day, {}.'.format(top_day.title()))
