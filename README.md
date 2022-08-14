@@ -5,13 +5,10 @@ _Most recent update: **08/13/2022**_
 This project is called (you guessed it) Bikeshare. It's a simple command-line project that allows the user to summarize bikesharing data for the following cities:
 * Chicago
 * New York City
-* Washington[^1]
+* Washington
 
 The user also has the option to read through raw data files, if they desire. I believe the project will be easiest to use with terminal but should be useable with any command prompt or terminal capable of running python3.
 
-*Please note: Data is not included in this repo, so you would need access to the Udacity data files or similar data files on your own machine. All data was from a previously constructed extract and so was limited in scope.*
-
-[^1]: I'm guessing this is Washington DC, but I'm not sure.
 
 --------------
 ### **Creation Dates**
@@ -32,6 +29,13 @@ Data Files accessed by the project are:
 - new\_york\_city.csv
 - washington.csv
 
+**Important:** 
+
+These files are not included in this repo, so you will need access to the Udacity data files or similar data files on your own machine. These files will need to be stored in a "data" folder in the same repository as the bikeshare python file. *The code will not run successfully without the csv files in the designated folder.*
+
+You will need to have python3 installed and a working terminal or command prompt to run this project. 
+This code has not been tested on terminal/bash GUI apps and there has been limited testing using Jupyter notebooks. The presumption is that the code will run on any of these apps but there may be unforeseen bugs and/or issues.
+
 ----
 ### **Credits**
 It's important to give proper credit. 
@@ -41,7 +45,7 @@ Some of the readme's and other resources I used when constructing this readme ar
 - [Chrome Lighthouse readme](https://github.com/watercress80001/lighthouse/blob/b0a9b0b948c41e57a33575634963a84ede81f631/readme.md)
 - [makeMKV\_Readme](/makeMKV_Readme.rtf) This is a readme for a program I'm using to archive my dvds.
 - [GitHub Markdown Docs](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax) This was used to double check my markdown choices.
- - as well as countless other readme's I've read over the years (these have been lost to old computers--may they rest in peace).
+- as well as countless other readme's I've read over the years (these have been lost to old computers--may they rest in peace).
 
 *Vim info:*
 
